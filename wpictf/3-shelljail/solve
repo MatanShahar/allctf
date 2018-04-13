@@ -1,0 +1,5 @@
+You can run access that accepts a command and runs it under a user with priv to read the flag.
+The trick is that access filters some substrings that are invalid for commands.
+For example: *, flag, sh, /, etc..
+
+The easiest trick I found was [./access "find -exec cat {} \;"], I didn't even bother to filter the files.
